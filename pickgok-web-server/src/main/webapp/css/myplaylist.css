@@ -1,0 +1,157 @@
+/* =========================
+   기본
+========================= */
+body {
+    margin: 0;
+    background: #0f0f0f;
+    color: #fff;
+}
+
+/* 배경 */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 30% 25%, rgba(106,92,255,0.18), transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(0,224,255,0.14), transparent 45%);
+    z-index: -1;
+}
+
+/* =========================
+   중앙 정렬
+========================= */
+.empty-center {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   카드 래퍼
+========================= */
+.empty-card-wrapper {
+    position: relative;
+}
+
+/* =========================
+   🔥 카드 위 버튼 영역
+========================= */
+.empty-top-actions {
+    position: absolute;
+    top: -32px;        /* ⭐ 기존보다 위로 */
+    right: -10px;
+
+    display: flex;
+    gap: 10px;
+}
+
+/* 아이콘 + 텍스트 버튼 */
+.icon-text-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.icon-text-btn i {
+    font-size: 13px;
+}
+
+.icon-text-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.22);
+}
+
+/* 홈 버튼 */
+.home-btn {
+    color: #9ad7ff;
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+    color: #ff6b6b;
+}
+
+/* =========================
+   중앙 카드
+========================= */
+.empty-playlist {
+    padding: 52px 60px;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.045);
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.55),
+        inset 0 0 0 1px rgba(255,255,255,0.06);
+
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 타이틀 */
+.playlist-title {
+    font-size: 26px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #6a5cff, #00e0ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 아이콘 */
+.empty-playlist i.fa-music {
+    font-size: 76px;
+    margin: 22px 0;
+}
+
+/* 텍스트 */
+.empty-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.empty-sub {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 28px;
+}
+
+/* 버튼 */
+.btn-go-home {
+    padding: 14px 34px;
+    border-radius: 26px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #6a5cff, #00e0ff);
+    color: #000;
+    text-decoration: none;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-go-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,224,255,0.45);
+}
